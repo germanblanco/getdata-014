@@ -13,8 +13,8 @@ run_analysis <- function(download.file = FALSE) {
     ## Optionally download the original data set from internet
     ##
     if (download.file) {
-        url <- "https://d396qusza40orc.cloudfront.net/"
-                "getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+        url <- paste0("https://d396qusza40orc.cloudfront.net/",
+                "getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip")
         download.file(url, method = "curl", destfile="dataset.zip")
         unzip("dataset.zip")
     }
@@ -29,8 +29,8 @@ run_analysis <- function(download.file = FALSE) {
     X_train <- read.table(paste0(train.folder, "X_train.txt"), colClasses=classes)
     ## activity values are more "factor" than numeric, but this will be fixed later
     ## They will be used as indexes to find the descriptive label
-    Y_test <- read.table(paste0(test.folder, "Y_test.txt"), colClasses="numeric")
-    Y_train <- read.table(paste0(train.folder, "Y_train.txt"), colClasses="numeric")
+    Y_test <- read.table(paste0(test.folder, "y_test.txt"), colClasses="numeric")
+    Y_train <- read.table(paste0(train.folder, "y_train.txt"), colClasses="numeric")
 
     ## Merge all relevant files of the dataset into one
     subject_test <- read.table(paste0(test.folder, "subject_test.txt"), colClasses="factor")
