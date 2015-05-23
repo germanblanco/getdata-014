@@ -1,6 +1,6 @@
 The script in this repository produces a summarised dataset based on [Human Activity Recognition Using Smartphones Data Set](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
 
-The resulting dataset is returned by the function run_analysis, included in the run_analysis.R script in this repository. This function will download the original dataset from the web or expected to be found in the current working directory.
+The resulting dataset is returned by the function run_analysis, included in the run_analysis.R script in this repository. This function will download the original dataset from the web or expect it to be found in the current working directory.
 
 ###Abstract
 
